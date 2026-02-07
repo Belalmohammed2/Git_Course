@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://entities/environment/spooky_light/SpookyLight.gd" id="1_ewmqo"]
+
+[node name="SpookyLight" type="OmniLight3D" unique_id=295921226]
+script = ExtResource("1_ewmqo")

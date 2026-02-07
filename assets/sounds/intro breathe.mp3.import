@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmv0unvh48x6r"
+path="res://.godot/imported/intro breathe.mp3-6713c5b2ad1afd7c3ce3e4a4b04ed832.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/intro breathe.mp3"
+dest_files=["res://.godot/imported/intro breathe.mp3-6713c5b2ad1afd7c3ce3e4a4b04ed832.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://co3fi4xrncvgy"
+path="res://.godot/imported/locked door shaking .mp3-37a24350457bc64a4b52be00effe73d3.mp3str"
+
+[deps]
+
+source_file="res://assets/Apartment_Door/Sounds/locked door shaking .mp3"
+dest_files=["res://.godot/imported/locked door shaking .mp3-37a24350457bc64a4b52be00effe73d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

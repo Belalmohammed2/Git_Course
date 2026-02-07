@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/Intro.gd" id="1_intro"]
+[ext_resource type="PackedScene" uid="uid://b577m1bceasd1" path="res://assets/messy bed/messy bed.tscn" id="2_messybed"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bed"]
+size = Vector3(1.5, 0.6, 2.5)
+
+[node name="Intro" type="Node3D" node_paths=PackedStringArray("bed_body")]
+script = ExtResource("1_intro")
+bed_body = NodePath("Bed")
+
+[node name="CeilingTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Bed" type="StaticBody3D" parent="."]
+
+[node name="messy_bed" parent="Bed" instance=ExtResource("2_messybed")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+shape = SubResource("BoxShape3D_bed")
+
+[node name="EyelidsLayer" type="CanvasLayer" parent="."]
+
+[node name="TopLid" type="ColorRect" parent="EyelidsLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BottomLid" type="ColorRect" parent="EyelidsLayer"]
+anchors_preset = 12
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)

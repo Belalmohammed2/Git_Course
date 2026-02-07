@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8x7k2y5q4e3"]
+
+[ext_resource type="Script" path="res://scripts/Key.gd" id="1_key_script"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_key"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Key" type="Area3D"]
+script = ExtResource("1_key_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_key")
+
+[node name="ModelContainer" type="Node3D" parent="."]
+# User can drop their 3D model here

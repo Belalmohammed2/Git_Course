@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://5julyxt22knt"]
+
+[ext_resource type="PackedScene" uid="uid://cu0asjjjrq0j0" path="res://entities/enemies/dark figure/dark figure t pose.fbx" id="1_rfils"]
+[ext_resource type="Animation" uid="uid://7hu3iw4fk2ym" path="res://entities/enemies/dark figure/walk-relaxed-2loop-378986.res" id="2_rfils"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s171y"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rfils"]
+_data = {
+&"walk-relaxed-2loop-378986": ExtResource("2_rfils")
+}
+
+[node name="Node3D" type="Node3D" unique_id=492644110]
+
+[node name="dark figure t pose" parent="." unique_id=1544878947 instance=ExtResource("1_rfils")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010128245, 0, -1.0891042)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="dark figure t pose" unique_id=894944886]
+"libraries/dark figure" = SubResource("AnimationLibrary_s171y")
+"libraries/walk relaxed " = SubResource("AnimationLibrary_rfils")
+autoplay = &"walk relaxed /walk relaxed"

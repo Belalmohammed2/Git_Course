@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cibdsxfgtbpbc"
+path="res://.godot/imported/get key.mp3-0864321438eea57d71f28f1947b47820.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/get key.mp3"
+dest_files=["res://.godot/imported/get key.mp3-0864321438eea57d71f28f1947b47820.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

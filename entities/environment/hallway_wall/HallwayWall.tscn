@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="BoxMesh" path="res://entities/environment/hallway_wall/hallway_wall_mesh.tres" id="1_28ed1"]
+[ext_resource type="Shape3D" path="res://entities/environment/hallway_wall/hallway_wall_shape.tres" id="2_gyqr7"]
+
+[node name="HallwayWall" type="StaticBody3D" unique_id=254613007]
+
+[node name="WallMesh" type="MeshInstance3D" parent="." unique_id=121835766]
+mesh = ExtResource("1_28ed1")
+
+[node name="WallCollision" type="CollisionShape3D" parent="." unique_id=859193601]
+shape = ExtResource("2_gyqr7")

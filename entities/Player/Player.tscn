@@ -1,0 +1,31 @@
+[gd_scene format=3]
+
+[ext_resource type="Shape3D" path="res://entities/Player/player_shape.tres" id="1_37iom"]
+[ext_resource type="Script" path="res://entities/Player/Player.gd" id="1_x2a24"]
+[ext_resource type="CapsuleMesh" path="res://entities/Player/player_mesh.tres" id="2_bui5v"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1300557149 groups=["Player"]]
+script = ExtResource("1_x2a24")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1909682084]
+shape = ExtResource("1_37iom")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=721825399]
+mesh = ExtResource("2_bui5v")
+
+[node name="Head" type="Node3D" parent="." unique_id=2075123124]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1371092767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1958344, 0)
+
+[node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=496791205]
+light_energy = 10.0
+
+[node name="FlashlightSFX" type="AudioStreamPlayer3D" parent="Head" unique_id=1218735340]
+
+[node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=1659311428]
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=32064392]
+text = "Objective: Look around"
+horizontal_alignment = 1

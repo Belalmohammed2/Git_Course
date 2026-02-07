@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://1krhamtonbey" path="res://scripts/JumpscareTrigger.gd" id="8_aq56a"]
+[ext_resource type="PackedScene" uid="uid://2xu3nihjbubv" path="res://scenes/jumb scare 2.tscn" id="8_lptls"]
+
+[node name="Level 1" type="Node3D" unique_id=690888835]
+
+[node name="Jumpscare2_Trigger" type="Area3D" parent="." unique_id=1615021900]
+collision_mask = 3
+script = ExtResource("8_aq56a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Jumpscare2_Trigger" unique_id=1156714320]
+
+[node name="ShadowFigure_Jumpscare2" type="Node3D" parent="." unique_id=797460464 instance=ExtResource("8_lptls")]
+
+[node name="LevelInstance" type="Node3D" parent="." unique_id=1985898457]

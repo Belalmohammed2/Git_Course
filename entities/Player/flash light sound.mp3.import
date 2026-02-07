@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq0sei13qwkg6"
+path="res://.godot/imported/flash light sound.mp3-6ac35b2d79fd12be62c1eb8ed9664099.mp3str"
+
+[deps]
+
+source_file="res://entities/Player/flash light sound.mp3"
+dest_files=["res://.godot/imported/flash light sound.mp3-6ac35b2d79fd12be62c1eb8ed9664099.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

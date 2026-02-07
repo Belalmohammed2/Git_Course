@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://cj32wyvet7j54"]
+
+[ext_resource type="PackedScene" uid="uid://b03ag1ph4rrr6" path="res://entities/Player/Player.tscn" id="1_w16ip"]
+[ext_resource type="PackedScene" uid="uid://c2je3e2dorpd1" path="res://assets/door frame/door_frame.tscn" id="2_ky28j"]
+[ext_resource type="PackedScene" uid="uid://ijjukwoe6c7f" path="res://assets/Walls/main wall.tscn" id="3_q50bb"]
+[ext_resource type="AudioStream" uid="uid://dmv0unvh48x6r" path="res://assets/sounds/intro breathe.mp3" id="5_3qrju"]
+[ext_resource type="PackedScene" uid="uid://dr3ejc3lvhsmd" path="res://assets/mirror/mirror.tscn" id="5_fqgoq"]
+[ext_resource type="PackedScene" path="res://assets/keys/old key.tscn" id="6_rvsh6"]
+[ext_resource type="PackedScene" uid="uid://co4r4msvkawep" path="res://assets/lights/ceiling light.tscn" id="7_u0aay"]
+[ext_resource type="Script" uid="uid://03p3ot51p250" path="res://scripts/flickering_light.gd" id="8_1d72u"]
+[ext_resource type="AudioStream" uid="uid://cibdsxfgtbpbc" path="res://assets/sounds/get key.mp3" id="8_sl3q7"]
+[ext_resource type="PackedScene" uid="uid://cqslirho36s7w" path="res://assets/pills/plate with pills.glb" id="9_86sxp"]
+[ext_resource type="PackedScene" uid="uid://b8mdnkqwylaau" path="res://assets/table/table1.tscn" id="10_konca"]
+[ext_resource type="PackedScene" uid="uid://daj2ju21hlbb4" path="res://assets/Apartment_Door/door.tscn" id="11_5y4lf"]
+[ext_resource type="PackedScene" uid="uid://7mms1p7s4wci" path="res://entities/enemies/scary doctor/scary_doctor.tscn" id="12_124t4"]
+[ext_resource type="PackedScene" path="res://entities/Intro/Intro.tscn" id="13_intro"]
+[ext_resource type="PackedScene" uid="uid://5julyxt22knt" path="res://entities/enemies/dark figure/dark figure.tscn" id="14_4ti40"]
+[ext_resource type="Animation" uid="uid://7hu3iw4fk2ym" path="res://entities/enemies/dark figure/walk-relaxed-2loop-378986.res" id="16_sl3q7"]
+[ext_resource type="AudioStream" uid="uid://d2i0n8sul4psq" path="res://assets/sounds/jumb scare 2.mp3" id="16_ugrws"]
+[ext_resource type="Script" uid="uid://br0kg0d3u3aa5" path="res://scripts/DarkFigureTrigger.gd" id="21_33j36"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7607"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wpcli"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s7607"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i4ra3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ti40"]
+size = Vector3(7.1064224, 1, 2.7764893)
+
+[node name="Node" type="Node" unique_id=1717307038]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1012206970]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1454899726]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, -0.06441498, -0.13435745, 0.13003922)
+material_override = SubResource("StandardMaterial3D_s7607")
+mesh = SubResource("PlaneMesh_wpcli")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/MeshInstance3D" unique_id=764513099]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/MeshInstance3D/StaticBody3D" unique_id=584138742]
+shape = SubResource("ConvexPolygonShape3D_s7607")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="Player" parent="Node3D" unique_id=1247496932 instance=ExtResource("1_w16ip")]
+transform = Transform3D(0.7664706, 0, 0.6422794, 0, 1, 0, -0.6422794, 0, 0.7664706, 29.828684, 1.7865593, 46.168415)
+
+[node name="door frame" parent="Node3D" unique_id=1232400347 instance=ExtResource("2_ky28j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.399181, 0, 36.20531)
+
+[node name="door frame2" parent="Node3D" unique_id=318147395 instance=ExtResource("2_ky28j")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.439272, 0, 43.344925)
+
+[node name="door frame3" parent="Node3D" unique_id=1815937825 instance=ExtResource("2_ky28j")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.316681, -2.3841858e-07, 43.379707)
+
+[node name="walls" type="Node" parent="Node3D" unique_id=871462508]
+
+[node name="wall" parent="Node3D/walls" unique_id=1479665763 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.801022, -1.5258789e-05, 36.16771)
+
+[node name="wall13" parent="Node3D/walls" unique_id=1238627907 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.60162, -1.5258789e-05, 36.16771)
+
+[node name="wall14" parent="Node3D/walls" unique_id=903401929 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.402218, -1.5258789e-05, 36.16771)
+
+[node name="wall15" parent="Node3D/walls" unique_id=1366493681 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.589432, -1.5258789e-05, 44.664104)
+
+[node name="wall16" parent="Node3D/walls" unique_id=2117469303 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.32263, -1.5258789e-05, 44.664104)
+
+[node name="wall17" parent="Node3D/walls" unique_id=588083154 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.123228, -1.5258789e-05, 44.664104)
+
+[node name="wall18" parent="Node3D/walls" unique_id=272339758 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.923828, -1.5258789e-05, 44.664104)
+
+[node name="wall25" parent="Node3D/walls" unique_id=886211075 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.612732, -1.5497208e-05, 41.75321)
+
+[node name="wall26" parent="Node3D/walls" unique_id=1596408829 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.34593, -1.5497208e-05, 41.75321)
+
+[node name="wall27" parent="Node3D/walls" unique_id=1138301352 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.14653, -1.5377998e-05, 41.75321)
+
+[node name="wall28" parent="Node3D/walls" unique_id=3264564 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.947126, -1.5258789e-05, 41.75321)
+
+[node name="wall19" parent="Node3D/walls" unique_id=2099815221 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.86842, -1.5258789e-05, 47.370102)
+
+[node name="wall20" parent="Node3D/walls" unique_id=1055475810 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.60162, -1.5258789e-05, 47.370102)
+
+[node name="wall21" parent="Node3D/walls" unique_id=974304653 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.402218, -1.5258789e-05, 47.370102)
+
+[node name="wall3" parent="Node3D/walls" unique_id=1664095529 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.39923, -1.5258789e-05, 36.20531)
+
+[node name="wall4" parent="Node3D/walls" unique_id=740994839 instance=ExtResource("3_q50bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.66603, -1.5258789e-05, 36.20531)
+
+[node name="wall5" parent="Node3D/walls" unique_id=1960528005 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.286285, -1.5258789e-05, 34.922863)
+
+[node name="wall6" parent="Node3D/walls" unique_id=1942901627 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.286285, -1.5258789e-05, 37.72346)
+
+[node name="wall8" parent="Node3D/walls" unique_id=1463278449 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.286285, -1.5258789e-05, 43.324657)
+
+[node name="wall9" parent="Node3D/walls" unique_id=1883942009 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.77367, -1.5258789e-05, 34.90856)
+
+[node name="wall22" parent="Node3D/walls" unique_id=425620268 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.2490534e-08, 0, 1, 0, 1, 0, -0.9720701, 0, -4.371139e-08, 25.43927, -1.5258789e-05, 35.01048)
+
+[node name="wall23" parent="Node3D/walls" unique_id=603292729 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.43927, -1.5258789e-05, 37.74368)
+
+[node name="wall24" parent="Node3D/walls" unique_id=2059002819 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.4530328e-08, 0, 1, 0, 1, 0, -1.018735, 0, -4.371139e-08, 25.439272, -1.5258789e-05, 43.318645)
+
+[node name="wall10" parent="Node3D/walls" unique_id=1159645280 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.77367, -1.5258789e-05, 37.70916)
+
+[node name="wall11" parent="Node3D/walls" unique_id=118624149 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.77367, -1.5258789e-05, 40.509758)
+
+[node name="wall12" parent="Node3D/walls" unique_id=1843375647 instance=ExtResource("3_q50bb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.77367, -1.5258789e-05, 43.310356)
+
+[node name="Intro" parent="Node3D" unique_id=123053296 instance=ExtResource("13_intro")]
+transform = Transform3D(-1.2, 0, -1.8119498e-07, 0, 1.2, 0, 1.8119498e-07, 0, -1.2, 29.773735, 0.00092631025, 45.863007)
+breathe_sound = ExtResource("5_3qrju")
+
+[node name="mirror" parent="Node3D" unique_id=985990667 node_paths=PackedStringArray("dark_figures") instance=ExtResource("5_fqgoq")]
+transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 26.022884, -0.13152409, 38.72457)
+dark_figures = [NodePath("../../jump scare 1/scary doctor"), NodePath("../../jump scare 1/scary doctor2"), NodePath("../../jump scare 1/scary doctor3")]
+
+[node name="key1" parent="Node3D" unique_id=585438318 instance=ExtResource("6_rvsh6")]
+transform = Transform3D(1, 0, 0, 0, 0.70465887, 0.7095461, 0, -0.7095461, 0.70465887, 32.353043, 0.53273374, 38.685703)
+pickup_sound = ExtResource("8_sl3q7")
+
+[node name="celing lgiht" parent="Node3D" unique_id=1743959337 instance=ExtResource("7_u0aay")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 30.22216, 2.1785338, 42.323357)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D/celing lgiht" unique_id=1285640607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.591934, 0)
+light_color = Color(0.69799274, 0.69799274, 0.69799274, 1)
+omni_range = 7.495974
+script = ExtResource("8_1d72u")
+
+[node name="plate with pills" parent="." unique_id=664581108 instance=ExtResource("9_86sxp")]
+transform = Transform3D(-0.0050000004, 0, 0.008660254, 0, 0.01, 0, -0.008660254, 0, -0.0050000004, 32.317665, 0.46506965, 38.19552)
+
+[node name="Table" parent="." unique_id=522309773 instance=ExtResource("10_konca")]
+transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.27, 32.31273, 0, 38.32608)
+
+[node name="Door_FBX" parent="." unique_id=816877609 instance=ExtResource("11_5y4lf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.553875, -0.0052998066, 44.01208)
+required_key_id = "old_key"
+
+[node name="Door_FBX2" parent="." unique_id=1276079893 instance=ExtResource("11_5y4lf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.4525795, 0.16669975, 44.046864)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1897982249]
+transform = Transform3D(4.0869265, 0, 0, 0, -6, 5.2453663e-07, 0, -5.2453663e-07, -6, 29.7544, 3.2000003, 41.511303)
+mesh = SubResource("PlaneMesh_i4ra3")
+
+[node name="jump scare 1" type="Node" parent="." unique_id=524544276]
+
+[node name="scary doctor" parent="jump scare 1" unique_id=743049648 instance=ExtResource("12_124t4")]
+transform = Transform3D(-1.4984273, 0, -0.06867224, 0, 1.5, 0, 0.06867224, 0, -1.4984273, 29, 0, 41.53629)
+visible = false
+
+[node name="scary doctor2" parent="jump scare 1" unique_id=568093302 instance=ExtResource("12_124t4")]
+transform = Transform3D(-1.4984273, 0, -0.06867224, 0, 1.5, 0, 0.06867224, 0, -1.4984273, 27.598759, 0, 41.53629)
+visible = false
+
+[node name="scary doctor3" parent="jump scare 1" unique_id=1271715202 instance=ExtResource("12_124t4")]
+transform = Transform3D(-1.4984273, 0, -0.06867224, 0, 1.5, 0, 0.06867224, 0, -1.4984273, 30.828302, 0, 41.53629)
+visible = false
+
+[node name="jumb scare 2" type="Node" parent="." unique_id=1294032309]
+
+[node name="DarkFigureEvent" type="Area3D" parent="jumb scare 2" unique_id=581789725 node_paths=PackedStringArray("door", "dark_figure")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.303634, 0.5025778, 43.450462)
+script = ExtResource("21_33j36")
+door = NodePath("../../Door_FBX")
+dark_figure = NodePath("../Dark figure")
+sound_track = ExtResource("16_ugrws")
+custom_animation = ExtResource("16_sl3q7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="jumb scare 2/DarkFigureEvent" unique_id=1713206332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0532122, 0, -0.07269287)
+shape = SubResource("BoxShape3D_4ti40")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="Dark figure" parent="jumb scare 2" unique_id=492644110 instance=ExtResource("14_4ti40")]
+transform = Transform3D(-6.9938224e-08, 0, 1.6, 0, 1.6, 0, -1.6, 0, -6.9938224e-08, 17.504051, -0.1579049, 43.377254)
+visible = false

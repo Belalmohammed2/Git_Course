@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dr3ejc3lvhsmd"]
+
+[ext_resource type="PackedScene" uid="uid://dep7piu4vbsth" path="res://assets/mirror/mirror_a.glb" id="1_4v74c"]
+[ext_resource type="Script" uid="uid://b7hkup5qfa808" path="res://scripts/Mirror.gd" id="2_rob7d"]
+
+[node name="Sketchfab_Scene" unique_id=985990667 instance=ExtResource("1_4v74c")]
+script = ExtResource("2_rob7d")
+scare_enabled = true
+
+[node name="BlackoutCanvas" type="CanvasLayer" parent="." index="1" unique_id=3847192004]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="BlackoutCanvas" index="0" unique_id=293847561]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)        

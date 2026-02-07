@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://daj2ju21hlbb4"]
+
+[ext_resource type="PackedScene" uid="uid://f6wlwqfr86a6" path="res://assets/Apartment_Door/Door_FBX.fbx" id="1_vtj8s"]
+[ext_resource type="Texture2D" uid="uid://br40hy1gadb2t" path="res://assets/Apartment_Door/texture/Simple Door LOD0_LOD0_AlbedoTransparency.png" id="2_f4rj3"]
+[ext_resource type="Script" uid="uid://mpkfl336ygvj" path="res://scripts/Door.gd" id="3_door_script"]
+[ext_resource type="AudioStream" uid="uid://cqwoymb54owpk" path="res://assets/Apartment_Door/Sounds/open-door-stock-sfx-454246.mp3" id="4_door_sound"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_door"]
+size = Vector3(1.0, 2.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytpji"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pl08m"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nq8m2"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnhyg"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxdhl"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a810m"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5mmy"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v6fgb"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqcuc"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr2me"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptdbi"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d2kr"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27tpa"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw1g6"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajf5b"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvjs2"]
+albedo_texture = ExtResource("2_f4rj3")
+
+[node name="Door_FBX" unique_id=816877609 instance=ExtResource("1_vtj8s")]
+script = ExtResource("3_door_script")
+open_sound = ExtResource("4_door_sound")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="0" unique_id=2054639140]
+max_distance = 10.0
+
+[node name="SimpleDoor_MainDoor_LOD0" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="0" unique_id=655035644]
+transform = Transform3D(1, 0, 9.525234e-05, 0, 1, 0, -9.525234e-05, 0, 1, -0.56517357, 0.59642166, -0.027961)
+surface_material_override/0 = SubResource("StandardMaterial3D_ytpji")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Global_Control/SimpleDoor_MainDoor_LOD0" index="0"]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Global_Control/SimpleDoor_MainDoor_LOD0/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.05, 0)
+shape = SubResource("BoxShape3D_door")
+
+[node name="InteractLabel" type="Label3D" parent="Global_Control/SimpleDoor_MainDoor_LOD0" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0, 1.0, 0.1)
+visible = false
+billboard = 1
+no_depth_test = true
+text = "E"
+font_size = 64
+outline_size = 12
+
+[node name="SimpleDoor_Handle1_LOD0" parent="Global_Control/SimpleDoor_MainDoor_LOD0" index="2" unique_id=540646752]
+transform = Transform3D(0.9999978, -0.0020965931, 0, 0.0020965931, 0.9999978, 0, 0, 0, 1, 1.0632149, 0.7831021, 0.1314752)
+surface_material_override/0 = SubResource("StandardMaterial3D_pl08m")
+
+[node name="SimpleDoor_Handle2_LOD0" parent="Global_Control/SimpleDoor_MainDoor_LOD0" index="3" unique_id=1031636610]
+transform = Transform3D(0.99999976, -0.0006988648, 0, 0.0006988648, 0.99999976, 0, 0, 0, 1, 1.0631324, 0.7826549, 0.004223103)
+surface_material_override/0 = SubResource("StandardMaterial3D_nq8m2")
+
+[node name="SimpleDoor_MainDoor_LOD2" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="1" unique_id=1565278236]
+transform = Transform3D(1, 0, 9.525234e-05, 0, 1, 0, -9.525234e-05, 0, 1, -0.56532156, 0.59788924, -0.025726162)
+material_override = SubResource("StandardMaterial3D_fnhyg")
+surface_material_override/0 = SubResource("StandardMaterial3D_wxdhl")
+surface_material_override/1 = SubResource("StandardMaterial3D_a810m")
+
+[node name="SimpleDoor_Handle1_LOD2" parent="Global_Control/SimpleDoor_MainDoor_LOD2" index="0" unique_id=1862393508]
+visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_l5mmy")
+
+[node name="SimpleDoor_Handle2_LOD2" parent="Global_Control/SimpleDoor_MainDoor_LOD2" index="1" unique_id=233559087]
+transform = Transform3D(0.99999976, -0.0006988648, 0, 0.0006988648, 0.99999976, 0, 0, 0, 1, 1.0630262, 0.78150755, -0.013653589)
+surface_material_override/0 = SubResource("StandardMaterial3D_v6fgb")
+
+[node name="SimpleDoor_DoorFrame_LOD1" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="2" unique_id=547056871]
+surface_material_override/0 = SubResource("StandardMaterial3D_pqcuc")
+surface_material_override/1 = SubResource("StandardMaterial3D_tr2me")
+
+[node name="SimpleDoor_DoorFrame_LOD2" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="3" unique_id=1224176348]
+surface_material_override/0 = SubResource("StandardMaterial3D_ptdbi")
+surface_material_override/1 = SubResource("StandardMaterial3D_3d2kr")
+
+[node name="SimpleDoor_MainDoor_LOD1" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="4" unique_id=1265236586]
+transform = Transform3D(1, 0, 9.525234e-05, 0, 1, 0, -9.525234e-05, 0, 1, -0.56532156, 0.59788924, -0.025726162)
+surface_material_override/0 = SubResource("StandardMaterial3D_27tpa")
+surface_material_override/1 = SubResource("StandardMaterial3D_aw1g6")
+
+[node name="SimpleDoor_Handle1_LOD1" parent="Global_Control/SimpleDoor_MainDoor_LOD1" index="0" unique_id=513571369]
+visible = false
+surface_material_override/0 = SubResource("StandardMaterial3D_ajf5b")
+
+[node name="SimpleDoor_Handle2_LOD1" parent="Global_Control/SimpleDoor_MainDoor_LOD1" index="1" unique_id=1510025743]
+transform = Transform3D(0.99999976, -0.0006988648, 0, 0.0006988648, 0.99999976, 0, 0, 0, 1, 1.0631452, 0.7815098, 0.0019882636)
+
+[node name="SimpleDoor_DoorFrame_LOD0" parent="Global_Control" parent_id_path=PackedInt32Array(1282818079) index="5" unique_id=395948554]
+surface_material_override/0 = SubResource("StandardMaterial3D_pvjs2")

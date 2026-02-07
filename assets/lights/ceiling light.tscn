@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://co4r4msvkawep"]
+
+[ext_resource type="PackedScene" uid="uid://chsmiop2su38f" path="res://assets/lights/garage_ceiling_light_lamp_projector_the_light.glb" id="1_g013p"]
+
+[node name="Sketchfab_Scene" unique_id=1743959337 instance=ExtResource("1_g013p")]
+
+[node name="Object_2" parent="Sketchfab_model/362a85bb913b4e10b7569b8edde019a6_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1385978769) index="0" unique_id=566231891]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Object_3" parent="Sketchfab_model/362a85bb913b4e10b7569b8edde019a6_obj_cleaner_materialmerger_gles" parent_id_path=PackedInt32Array(1385978769) index="1" unique_id=1880063690]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
